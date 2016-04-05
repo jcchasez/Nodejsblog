@@ -15,7 +15,9 @@ var flash = require('connect-flash');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
-
+//added port
+//var port = (process.env.PORT || '3000');
+//app.listen(port);
 
 var app = express();
 
@@ -29,7 +31,9 @@ app.use(session({
   //  db: settings.db,
   //  host: settings.host,
   //  port: settings.port
-})
+}),
+  resave: true,
+  saveUninitialized: true//added
 }));
 
 
