@@ -43,6 +43,13 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(flash());
 
+//added two line
+//app.set('port', process.env.PORT || 3000);
+
+//var server = app.listen(app.get('port'), function () {
+   // console.log('server listening on port ' + server.address().port);
+//});
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.jpg')));
 app.use(logger('dev'));
