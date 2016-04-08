@@ -13,12 +13,13 @@ var app = express.Router();
     res.render('index', {
       title: '主页',
       user: req.session.user,
-      posts:posts,
+      posts: posts,
       success: req.flash('success').toString(),
       error: req.flash('error').toString()
     });
 	});
   });
+
 
   app.get('/reg', checkNotLogin);
   app.get('/reg', function (req, res) {
